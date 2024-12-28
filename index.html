@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .main {
+        background-color: hsl(47, 88%, 63%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 400px;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px;
+        border: 2px solid black;
+        overflow: hidden; /* Ensure children do not overflow */
+        position: relative;
+      }
+      .container-img {
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        overflow: hidden;
+        position: absolute;
+        top: 16px;
+      }
+      .container-img .img-wrapper {
+        width: calc(100% - 32px);
+        height: 100%;
+        margin: 0 auto;
+      }
+      .container-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="main">
+    <div class="container">
+      <div class="container-img">
+        <div class="img-wrapper">
+          <img src="./assets/images/illustration-article.svg" alt="Drawers" />
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
