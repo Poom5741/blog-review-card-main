@@ -13,9 +13,19 @@
     />
 
     <title>Frontend Mentor | Blog preview card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      span,
+      p {
+        font-family: "Figtree", sans-serif;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -33,7 +43,7 @@
       }
       .container {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 320px;
         height: 400px;
@@ -46,11 +56,11 @@
       }
       .container-img {
         width: 100%;
-        height: 200px;
+        height: 150px;
         background-position: center;
         overflow: hidden;
-        position: absolute;
-        top: 16px;
+        position: relative;
+        padding-top: 20px;
       }
       .container-img .img-wrapper {
         width: calc(100% - 32px);
@@ -63,6 +73,65 @@
         object-fit: cover;
         border-radius: 10px;
       }
+
+      .tag-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: left;
+        margin-left: 32px;
+        margin-top: 10px;
+      }
+      .tag-wrapper > .tag {
+        background-color: hsl(47, 88%, 63%);
+        color: hsl(0, 0%, 7%);
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 3px;
+      }
+      .tag-wrapper > p {
+        font-size: 16px;
+        color: hsl(0, 0%, 7%);
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        margin-left: 32px;
+      }
+
+      .content-header {
+        margin: 0;
+        font-weight: 800;
+        font-size: 24px;
+      }
+      .content-body {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(0, 0%, 42%);
+      }
+      .user-info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+      }
+      .user-img img {
+        width: 10px;
+        height: auto;
+      }
+      .user-info p {
+        margin: 0; /* Remove default margin */
+        font-size: 16px; /* Adjust font size */
+      }
     </style>
   </head>
   <body class="main">
@@ -72,7 +141,23 @@
           <img src="./assets/images/illustration-article.svg" alt="Drawers" />
         </div>
       </div>
-      <div></div>
+      <div class="tag-wrapper">
+        <span class="tag">learning</span>
+        <p>published 21 Dec 2023</p>
+      </div>
+      <div class="content-wrapper">
+        <p class="content-header">HTML & CSS foundations</p>
+        <p class="content-body">
+          these language are the backbone of every website, defining structure,
+          content, and presentation
+        </p>
+      </div>
+      <div class="user-info">
+        <div class="user-img">
+          <img src="./assets/images/image-avatar.webp" alt="" />
+        </div>
+        <p>Greg Hooper</p>
+      </div>
     </div>
     <!-- <div class="attribution">
       Challenge by
